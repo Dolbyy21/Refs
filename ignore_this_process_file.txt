@@ -1,0 +1,159 @@
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ sudo -u  postgresql 
+sudo: unknown user postgresql
+sudo: error initializing audit plugin sudoers_audit
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ sudo -u psql 
+sudo: unknown user psql
+sudo: error initializing audit plugin sudoers_audit
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ sudo postgres -u psql 
+[sudo] password for dolby: 
+Sorry, try again.
+[sudo] password for dolby: 
+sudo: postgres: command not found
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ postgres -u psql 
+Command 'postgres' not found, did you mean:
+  command 'postgrey' from deb postgrey (1.36-5.2)
+Try: sudo apt install <deb name>
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ postgres  
+Command 'postgres' not found, did you mean:
+  command 'postgrey' from deb postgrey (1.36-5.2)
+Try: sudo apt install <deb name>
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ sudo -u postgres psql 
+could not change directory to "/home/dolby/dattebayo/python_/Proj": Permission denied
+psql (14.4 (Ubuntu 14.4-1.pgdg22.04+1))
+Type "help" for help.
+
+postgres=# \du
+                                   List of roles
+ Role name |                         Attributes                         | Member of 
+-----------+------------------------------------------------------------+-----------
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+
+postgres=# ^C
+postgres=# \q
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ sudo -u postgres psql 
+could not change directory to "/home/dolby/dattebayo/python_/Proj": Permission denied
+psql (14.4 (Ubuntu 14.4-1.pgdg22.04+1))
+Type "help" for help.
+
+postgres=# \du
+                                   List of roles
+ Role name |                         Attributes                         | Member of 
+-----------+------------------------------------------------------------+-----------
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+
+postgres=# \du
+                                   List of roles
+ Role name |                         Attributes                         | Member of 
+-----------+------------------------------------------------------------+-----------
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+
+postgres=# \q
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker images -a
+REPOSITORY               TAG       IMAGE ID       CREATED          SIZE
+proj_backend             latest    0ddbf7a66faf   3 minutes ago    982MB
+<none>                   <none>    222fc51fe3e7   6 minutes ago    982MB
+<none>                   <none>    c176f51c654b   15 minutes ago   982MB
+<none>                   <none>    118e50789421   25 minutes ago   982MB
+<none>                   <none>    524b4d912744   25 minutes ago   982MB
+postgres                 latest    b2261d3c6ce0   12 days ago      376MB
+docker/getting-started   latest    cb90f98fd791   2 months ago     28.8MB
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker images -a
+REPOSITORY               TAG       IMAGE ID       CREATED          SIZE
+proj_backend             latest    0ddbf7a66faf   7 minutes ago    982MB
+<none>                   <none>    222fc51fe3e7   11 minutes ago   982MB
+<none>                   <none>    c176f51c654b   19 minutes ago   982MB
+<none>                   <none>    118e50789421   29 minutes ago   982MB
+<none>                   <none>    524b4d912744   29 minutes ago   982MB
+postgres                 latest    b2261d3c6ce0   12 days ago      376MB
+docker/getting-started   latest    cb90f98fd791   2 months ago     28.8MB
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker images -a
+REPOSITORY               TAG       IMAGE ID       CREATED          SIZE
+proj_backend             latest    0ddbf7a66faf   7 minutes ago    982MB
+<none>                   <none>    222fc51fe3e7   11 minutes ago   982MB
+<none>                   <none>    c176f51c654b   19 minutes ago   982MB
+<none>                   <none>    118e50789421   29 minutes ago   982MB
+<none>                   <none>    524b4d912744   29 minutes ago   982MB
+postgres                 latest    b2261d3c6ce0   12 days ago      376MB
+docker/getting-started   latest    cb90f98fd791   2 months ago     28.8MB
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ which postman
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ sudo snap install postman
+[sudo] password for dolby: 
+postman (v9/stable) 9.22.2 from Postman, Inc. (postman-inc**) installed
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ decker ps
+Command 'decker' not found, did you mean:
+  command 'docker' from snap docker (20.10.14)
+  command 'docker' from deb docker.io (20.10.12-0ubuntu4)
+  command 'docker' from deb podman-docker (3.4.4+ds1-1ubuntu1)
+See 'snap info <snapname>' for additional versions.
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker images -a
+REPOSITORY               TAG       IMAGE ID       CREATED          SIZE
+proj_backend             latest    dbf3a2d17322   5 minutes ago    982MB
+<none>                   <none>    0ddbf7a66faf   29 minutes ago   982MB
+<none>                   <none>    222fc51fe3e7   32 minutes ago   982MB
+<none>                   <none>    c176f51c654b   40 minutes ago   982MB
+<none>                   <none>    118e50789421   51 minutes ago   982MB
+<none>                   <none>    524b4d912744   51 minutes ago   982MB
+postgres                 latest    b2261d3c6ce0   12 days ago      376MB
+docker/getting-started   latest    cb90f98fd791   2 months ago     28.8MB
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ clear -x
+
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker login -u prakashbadugu
+Password: 
+WARNING! Your password will be stored unencrypted in /home/dolby/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+
+Logging in with your password grants your terminal complete access to your account. 
+For better security, log in with a limited-privilege personal access token. Learn more at https://docs.docker.com/go/access-tokens/
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker tag proj YOUR-USER-NAME/proj1
+Error parsing reference: "YOUR-USER-NAME/proj1" is not a valid repository/tag: invalid reference format: repository name must be lowercase
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker tag proj prakashbadugu/proj1
+Error response from daemon: No such image: proj:latest
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker tag proj_backend prakashbadugu/proj1
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker push prakashbadugu/proj1
+Using default tag: latest
+The push refers to repository [docker.io/prakashbadugu/proj1]
+96d82f06949a: Pushed 
+f15ff3e475c8: Pushed 
+ac680caed45a: Pushed 
+7fc1f3d44c99: Pushed 
+0e9a0f205963: Pushed 
+a84ac09f498f: Mounted from library/python 
+9d17ba627a77: Mounted from library/python 
+a8db90eb5ce0: Mounted from library/python 
+ca5c6d5c3d01: Mounted from library/python 
+33a247b4fc52: Mounted from library/python 
+5afd661c6106: Mounted from library/python 
+66183893ba24: Mounted from library/python 
+6840c8ff46bd: Mounted from library/python 
+97d5fec864d8: Mounted from library/python 
+latest: digest: sha256:746209a03fc1b942c927c33c616e70470b73f89dac3aeb802d6de3d0900dc78c size: 3263
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker tag proj_backend prakashbadugu/proj2
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker push prakashbadugu/proj2
+Using default tag: latest
+The push refers to repository [docker.io/prakashbadugu/proj2]
+96d82f06949a: Mounted from prakashbadugu/proj1 
+f15ff3e475c8: Mounted from prakashbadugu/proj1 
+ac680caed45a: Mounted from prakashbadugu/proj1 
+7fc1f3d44c99: Mounted from prakashbadugu/proj1 
+0e9a0f205963: Mounted from prakashbadugu/proj1 
+a84ac09f498f: Mounted from prakashbadugu/proj1 
+9d17ba627a77: Mounted from prakashbadugu/proj1 
+a8db90eb5ce0: Mounted from prakashbadugu/proj1 
+ca5c6d5c3d01: Mounted from prakashbadugu/proj1 
+33a247b4fc52: Mounted from prakashbadugu/proj1 
+5afd661c6106: Mounted from prakashbadugu/proj1 
+66183893ba24: Mounted from prakashbadugu/proj1 
+6840c8ff46bd: Mounted from prakashbadugu/proj1 
+97d5fec864d8: Mounted from prakashbadugu/proj1 
+latest: digest: sha256:746209a03fc1b942c927c33c616e70470b73f89dac3aeb802d6de3d0900dc78c size: 3263
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ cd ..
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_$ cd ..
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo$ cd ..
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~$ cat > git_pst.txt
+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 , Date_exp : Aug 6   
+^C
+dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~$ docker tag proj_backend prakashbadugu/proj3
+

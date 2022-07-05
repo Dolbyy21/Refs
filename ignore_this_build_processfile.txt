@@ -1,0 +1,1968 @@
+proj-db-1       | 2022-07-05 19:29:18.286 UTC [50] LOG:  shutting down
+proj-db-1       | 2022-07-05 19:29:18.300 UTC [48] LOG:  database system is shut down
+proj-db-1       |  done
+proj-db-1       | server stopped
+proj-db-1       | 
+proj-db-1       | PostgreSQL init process complete; ready for start up.
+proj-db-1       | 
+proj-db-1       | 2022-07-05 19:29:18.402 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+proj-db-1       | 2022-07-05 19:29:18.402 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+proj-db-1       | 2022-07-05 19:29:18.402 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+proj-db-1       | 2022-07-05 19:29:18.406 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+proj-db-1       | 2022-07-05 19:29:18.413 UTC [62] LOG:  database system was shut down at 2022-07-05 19:29:18 UTC
+proj-db-1       | 2022-07-05 19:29:18.420 UTC [1] LOG:  database system is ready to accept connections
+^CGracefully stopping... (press Ctrl+C again to force)
+[+] Running 2/2
+ ⠿ Container proj-backend-1  Stopped                                                                                      0.0s
+ ⠿ Container proj-db-1       Stopped                                                                                      0.1s
+canceled
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker compose up
+[+] Running 2/2
+ ⠿ Container proj-db-1       Recreated                                                                                    0.1s
+ ⠿ Container proj-backend-1  Recreated                                                                                    0.1s
+Attaching to proj-backend-1, proj-db-1
+proj-db-1       | 
+proj-db-1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+proj-db-1       | 
+proj-db-1       | 2022-07-05 19:31:00.078 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+proj-db-1       | 2022-07-05 19:31:00.078 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+proj-db-1       | 2022-07-05 19:31:00.078 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+proj-db-1       | 2022-07-05 19:31:00.082 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+proj-db-1       | 2022-07-05 19:31:00.089 UTC [27] LOG:  database system was shut down at 2022-07-05 19:30:57 UTC
+proj-db-1       | 2022-07-05 19:31:00.095 UTC [1] LOG:  database system is ready to accept connections
+proj-backend-1  | sh: 1: cd: can't cd to src
+proj-backend-1 exited with code 2
+
+
+
+
+^CGracefully stopping... (press Ctrl+C again to force)
+[+] Running 2/2
+ ⠿ Container proj-backend-1  Stopped                                                                                      0.0s
+ ⠿ Container proj-db-1       Stopped                                                                                      0.1s
+canceled
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker compose down
+[+] Running 3/3
+ ⠿ Container proj-backend-1  Removed                                                                                      0.0s
+ ⠿ Container proj-db-1       Removed                                                                                      0.0s
+ ⠿ Network proj_default      Removed                                                                                      0.1s
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker images -a
+REPOSITORY               TAG       IMAGE ID       CREATED         SIZE
+proj_backend             latest    118e50789421   2 minutes ago   982MB
+postgres                 latest    b2261d3c6ce0   12 days ago     376MB
+docker/getting-started   latest    cb90f98fd791   2 months ago    28.8MB
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker -rm proj_backens
+unknown shorthand flag: 'r' in -rm
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/home/dolby/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/dolby/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/dolby/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/dolby/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  app*        Docker App (Docker Inc., v0.9.1-beta3)
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.8.2-docker)
+  compose*    Docker Compose (Docker Inc., v2.6.1)
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  extension*  Manages Docker extensions (Docker Inc., v0.2.7)
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc., 0.6.0)
+  scan*       Docker Scan (Docker Inc., v0.17.0)
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker -rm proj_backens
+unknown shorthand flag: 'r' in -rm
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/home/dolby/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/dolby/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/dolby/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/dolby/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  app*        Docker App (Docker Inc., v0.9.1-beta3)
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.8.2-docker)
+  compose*    Docker Compose (Docker Inc., v2.6.1)
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  extension*  Manages Docker extensions (Docker Inc., v0.2.7)
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc., 0.6.0)
+  scan*       Docker Scan (Docker Inc., v0.17.0)
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker -rm proj_backend
+unknown shorthand flag: 'r' in -rm
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/home/dolby/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/dolby/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/dolby/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/dolby/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  app*        Docker App (Docker Inc., v0.9.1-beta3)
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.8.2-docker)
+  compose*    Docker Compose (Docker Inc., v2.6.1)
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  extension*  Manages Docker extensions (Docker Inc., v0.2.7)
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc., 0.6.0)
+  scan*       Docker Scan (Docker Inc., v0.17.0)
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker rmi $(docker images -a -q)
+Untagged: proj_backend:latest
+Deleted: sha256:118e507894214503a70e3925116d251dd1b5f0b3345e281f00371df0119cd5e5
+Untagged: postgres:latest
+Untagged: postgres@sha256:4ba3b78788bb284687376b9c1e0565b245375ddee0fe14cef25e315b6bd88b1a
+Deleted: sha256:b2261d3c6ce0b23bed32e7567a92646b880de73d802550b1275baa0997aa34d0
+Deleted: sha256:e8263d3c2ebda762990dc75393b3ee163d899a7217025636e96813f0e80f9d59
+Deleted: sha256:2b9f2510d1d0ed0fa2e351387d764cd58db5bcd9bb8f8e7ee417ea552af581a6
+Deleted: sha256:66cb3f97075c91701eb9f52c4a1c3995d93c8c8236d4d4794416515aa13e6b88
+Deleted: sha256:338920675850a54e7bf1bbf281342550ad2916ceb0a3ebbce41cfa3c31c1e3bd
+Deleted: sha256:3fde83b9c7f0d3c9a382a32b4a4a141d51769d8e05648dd3ec32af57ce230285
+Deleted: sha256:3952e0261db31c6ac79c4862d1a1fa86f731d630f8b412ad49efc06a510cb720
+Deleted: sha256:e3f173d391719d22996619fc213fbac4ca50e2a1d8cbb20c3cd3c0ba18fde2fd
+Deleted: sha256:2d65fe7c061825e4cbdfcb17ef475871c283d786eddc3e39f94e04dadea2df39
+Deleted: sha256:07ef69580a8a68dc5e67305389ae34fb8ec7bbde725b696a1e914692f5a58160
+Deleted: sha256:8be0e9c01cc3eda04184a153b606ccc6b152f1ce18150c8410584cbc8951d2a0
+Deleted: sha256:08776471bfd973b90319c8c8c8e950806232daeba79d478a350f26dbee758547
+Deleted: sha256:49d2782e4c8be0611943f6cada80ca71c2ad16da4d359ff2e92caff8c431f94c
+Deleted: sha256:08249ce7456a1c0613eafe868aed936a284ed9f1d6144f7d2d08c514974a2af9
+Error response from daemon: conflict: unable to delete cb90f98fd791 (cannot be forced) - image is being used by running container dc3e1840ff6b
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker images -a
+REPOSITORY               TAG       IMAGE ID       CREATED        SIZE
+docker/getting-started   latest    cb90f98fd791   2 months ago   28.8MB
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up
+Creating network "proj_default" with the default driver
+Pulling db (postgres:)...
+latest: Pulling from library/postgres
+b85a868b505f: Pull complete
+b53bada42f30: Pull complete
+303bde9620f5: Pull complete
+5c32c0c0a1b9: Pull complete
+302630a57c06: Pull complete
+ddfead4dfb39: Pull complete
+03d9917b9309: Pull complete
+4bb0d8ea11e0: Pull complete
+cb69a02914fd: Pull complete
+295e6398825d: Pull complete
+aadcad7a2f3d: Pull complete
+e69648da3f43: Pull complete
+4f430e112473: Pull complete
+Digest: sha256:4ba3b78788bb284687376b9c1e0565b245375ddee0fe14cef25e315b6bd88b1a
+Status: Downloaded newer image for postgres:latest
+Building backend
+[+] Building 2.2s (11/11) FINISHED                                                                                             
+ => [internal] load build definition from Dockerfile                                                                      0.0s
+ => => transferring dockerfile: 2.82kB                                                                                    0.0s
+ => [internal] load .dockerignore                                                                                         0.0s
+ => => transferring context: 2B                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                            2.0s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d  0.0s
+ => [internal] load build context                                                                                         0.0s
+ => => transferring context: 6.93kB                                                                                       0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                             0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                              0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                           0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                 0.0s
+ => CACHED [stage-1 6/6] COPY proj /app/backend/                                                                          0.0s
+ => exporting to image                                                                                                    0.0s
+ => => exporting layers                                                                                                   0.0s
+ => => writing image sha256:118e507894214503a70e3925116d251dd1b5f0b3345e281f00371df0119cd5e5                              0.0s
+ => => naming to docker.io/library/proj_backend                                                                           0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+WARNING: Image for service backend was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating proj_db_1 ... done
+Creating proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+backend_1  | sh: 1: cd: can't cd to src
+db_1       | The files belonging to this database system will be owned by user "postgres".
+db_1       | This user must also own the server process.
+db_1       | 
+db_1       | The database cluster will be initialized with locale "en_US.utf8".
+db_1       | The default database encoding has accordingly been set to "UTF8".
+db_1       | The default text search configuration will be set to "english".
+db_1       | 
+db_1       | Data page checksums are disabled.
+db_1       | 
+db_1       | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db_1       | creating subdirectories ... ok
+db_1       | selecting dynamic shared memory implementation ... posix
+db_1       | selecting default max_connections ... 100
+db_1       | selecting default shared_buffers ... 128MB
+db_1       | selecting default time zone ... Etc/UTC
+db_1       | creating configuration files ... ok
+db_1       | running bootstrap script ... ok
+proj_backend_1 exited with code 2
+db_1       | performing post-bootstrap initialization ... ok
+db_1       | syncing data to disk ... initdb: warning: enabling "trust" authentication for local connections
+db_1       | You can change this by editing pg_hba.conf or using the option -A, or
+db_1       | --auth-local and --auth-host, the next time you run initdb.
+db_1       | ok
+db_1       | 
+db_1       | 
+db_1       | Success. You can now start the database server using:
+db_1       | 
+db_1       |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db_1       | 
+db_1       | waiting for server to start....2022-07-05 19:33:23.514 UTC [48] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 19:33:23.517 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 19:33:23.526 UTC [49] LOG:  database system was shut down at 2022-07-05 19:33:23 UTC
+db_1       | 2022-07-05 19:33:23.532 UTC [48] LOG:  database system is ready to accept connections
+db_1       |  done
+db_1       | server started
+db_1       | CREATE DATABASE
+db_1       | 
+db_1       | 
+db_1       | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+db_1       | 
+db_1       | 2022-07-05 19:33:23.734 UTC [48] LOG:  received fast shutdown request
+db_1       | waiting for server to shut down....2022-07-05 19:33:23.735 UTC [48] LOG:  aborting any active transactions
+db_1       | 2022-07-05 19:33:23.738 UTC [48] LOG:  background worker "logical replication launcher" (PID 55) exited with exit code 1
+db_1       | 2022-07-05 19:33:23.738 UTC [50] LOG:  shutting down
+db_1       | 2022-07-05 19:33:23.754 UTC [48] LOG:  database system is shut down
+db_1       |  done
+db_1       | server stopped
+db_1       | 
+db_1       | PostgreSQL init process complete; ready for start up.
+db_1       | 
+db_1       | 2022-07-05 19:33:23.868 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 19:33:23.869 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 19:33:23.869 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 19:33:23.874 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 19:33:23.880 UTC [62] LOG:  database system was shut down at 2022-07-05 19:33:23 UTC
+db_1       | 2022-07-05 19:33:23.885 UTC [1] LOG:  database system is ready to accept connections
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_db_1      ... done
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 1.1s (11/11) FINISHED                                                                                             
+ => [internal] load build definition from Dockerfile                                                                      0.0s
+ => => transferring dockerfile: 38B                                                                                       0.0s
+ => [internal] load .dockerignore                                                                                         0.0s
+ => => transferring context: 2B                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                            1.0s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d  0.0s
+ => [internal] load build context                                                                                         0.0s
+ => => transferring context: 710B                                                                                         0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                             0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                              0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                           0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                 0.0s
+ => CACHED [stage-1 6/6] COPY proj /app/backend/                                                                          0.0s
+ => exporting to image                                                                                                    0.0s
+ => => exporting layers                                                                                                   0.0s
+ => => writing image sha256:118e507894214503a70e3925116d251dd1b5f0b3345e281f00371df0119cd5e5                              0.0s
+ => => naming to docker.io/library/proj_backend                                                                           0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Starting proj_db_1 ... done
+Starting proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+backend_1  | sh: 1: cd: can't cd to src
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 19:33:48.809 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 19:33:48.809 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 19:33:48.809 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 19:33:48.812 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 19:33:48.818 UTC [26] LOG:  database system was shut down at 2022-07-05 19:33:42 UTC
+db_1       | 2022-07-05 19:33:48.823 UTC [1] LOG:  database system is ready to accept connections
+proj_backend_1 exited with code 2
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_db_1      ... done
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 1.2s (11/11) FINISHED                                                                                             
+ => [internal] load build definition from Dockerfile                                                                      0.0s
+ => => transferring dockerfile: 38B                                                                                       0.0s
+ => [internal] load .dockerignore                                                                                         0.0s
+ => => transferring context: 2B                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                            1.0s
+ => [internal] load build context                                                                                         0.0s
+ => => transferring context: 710B                                                                                         0.0s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d  0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                             0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                              0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                           0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                 0.0s
+ => CACHED [stage-1 6/6] COPY proj /app/backend/                                                                          0.0s
+ => exporting to image                                                                                                    0.0s
+ => => exporting layers                                                                                                   0.0s
+ => => writing image sha256:118e507894214503a70e3925116d251dd1b5f0b3345e281f00371df0119cd5e5                              0.0s
+ => => naming to docker.io/library/proj_backend                                                                           0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Starting proj_db_1 ... done
+Starting proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+backend_1  | sh: 1: cd: can't cd to src
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 19:35:11.512 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 19:35:11.512 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 19:35:11.512 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 19:35:11.515 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 19:35:11.521 UTC [26] LOG:  database system was shut down at 2022-07-05 19:35:08 UTC
+db_1       | 2022-07-05 19:35:11.526 UTC [1] LOG:  database system is ready to accept connections
+proj_backend_1 exited with code 2
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_db_1      ... done
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 1.2s (11/11) FINISHED                                                                                             
+ => [internal] load build definition from Dockerfile                                                                      0.0s
+ => => transferring dockerfile: 2.83kB                                                                                    0.0s
+ => [internal] load .dockerignore                                                                                         0.0s
+ => => transferring context: 2B                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                            1.0s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d  0.0s
+ => [internal] load build context                                                                                         0.0s
+ => => transferring context: 710B                                                                                         0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                             0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                              0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                           0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                 0.0s
+ => CACHED [stage-1 6/6] COPY proj /app/backend/                                                                          0.0s
+ => exporting to image                                                                                                    0.0s
+ => => exporting layers                                                                                                   0.0s
+ => => writing image sha256:524b4d9127441253d20814c11cef33c52c6e6c96baf903993664c9435276a494                              0.0s
+ => => naming to docker.io/library/proj_backend                                                                           0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Starting proj_db_1 ... done
+Recreating proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+backend_1  | sh: 1: cd: can't cd to src
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 19:35:20.301 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 19:35:20.301 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 19:35:20.301 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 19:35:20.305 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 19:35:20.311 UTC [26] LOG:  database system was shut down at 2022-07-05 19:35:17 UTC
+db_1       | 2022-07-05 19:35:20.317 UTC [1] LOG:  database system is ready to accept connections
+proj_backend_1 exited with code 2
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_db_1        ... done
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 1.2s (11/11) FINISHED                                                                                             
+ => [internal] load build definition from Dockerfile                                                                      0.0s
+ => => transferring dockerfile: 38B                                                                                       0.0s
+ => [internal] load .dockerignore                                                                                         0.0s
+ => => transferring context: 2B                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                            1.1s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d  0.0s
+ => [internal] load build context                                                                                         0.0s
+ => => transferring context: 710B                                                                                         0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                             0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                              0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                           0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                 0.0s
+ => CACHED [stage-1 6/6] COPY proj /app/backend/                                                                          0.0s
+ => exporting to image                                                                                                    0.0s
+ => => exporting layers                                                                                                   0.0s
+ => => writing image sha256:524b4d9127441253d20814c11cef33c52c6e6c96baf903993664c9435276a494                              0.0s
+ => => naming to docker.io/library/proj_backend                                                                           0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Starting proj_db_1 ... done
+Recreating proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 19:36:15.943 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 19:36:15.943 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 19:36:15.943 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 19:36:15.948 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 19:36:15.956 UTC [26] LOG:  database system was shut down at 2022-07-05 19:36:11 UTC
+db_1       | 2022-07-05 19:36:15.962 UTC [1] LOG:  database system is ready to accept connections
+backend_1  | python3: can't open file '/app/backend/manage.py': [Errno 2] No such file or directory
+proj_backend_1 exited with code 2
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_db_1        ... done
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 1.2s (11/11) FINISHED                                                                                             
+ => [internal] load build definition from Dockerfile                                                                      0.0s
+ => => transferring dockerfile: 38B                                                                                       0.0s
+ => [internal] load .dockerignore                                                                                         0.0s
+ => => transferring context: 2B                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                            1.1s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d  0.0s
+ => [internal] load build context                                                                                         0.0s
+ => => transferring context: 710B                                                                                         0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                             0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                              0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                           0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                 0.0s
+ => CACHED [stage-1 6/6] COPY proj /app/backend/                                                                          0.0s
+ => exporting to image                                                                                                    0.0s
+ => => exporting layers                                                                                                   0.0s
+ => => writing image sha256:524b4d9127441253d20814c11cef33c52c6e6c96baf903993664c9435276a494                              0.0s
+ => => naming to docker.io/library/proj_backend                                                                           0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Starting proj_db_1 ... done
+Recreating proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 19:36:39.967 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 19:36:39.967 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 19:36:39.967 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 19:36:39.971 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 19:36:39.978 UTC [26] LOG:  database system was shut down at 2022-07-05 19:36:37 UTC
+db_1       | 2022-07-05 19:36:39.984 UTC [1] LOG:  database system is ready to accept connections
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | Exception in thread django-main-thread:
+backend_1  | Traceback (most recent call last):
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 698, in url_patterns
+backend_1  |     iter(patterns)
+backend_1  | TypeError: 'module' object is not iterable
+backend_1  | 
+backend_1  | The above exception was the direct cause of the following exception:
+backend_1  | 
+backend_1  | Traceback (most recent call last):
+backend_1  |   File "/usr/local/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+backend_1  |     self.run()
+backend_1  |   File "/usr/local/lib/python3.10/threading.py", line 953, in run
+backend_1  |     self._target(*self._args, **self._kwargs)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+backend_1  |     fn(*args, **kwargs)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+backend_1  |     self.check(display_num_errors=True)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/base.py", line 487, in check
+backend_1  |     all_issues = checks.run_checks(
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/registry.py", line 88, in run_checks
+backend_1  |     new_errors = check(app_configs=app_configs, databases=databases)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+backend_1  |     all_namespaces = _load_all_namespaces(resolver)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 72, in _load_all_namespaces
+backend_1  |     namespaces.extend(_load_all_namespaces(pattern, current))
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+backend_1  |     url_patterns = getattr(resolver, "url_patterns", [])
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+backend_1  |     res = instance.__dict__[self.name] = self.func(instance)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 706, in url_patterns
+backend_1  |     raise ImproperlyConfigured(msg.format(name=self.urlconf_name)) from e
+backend_1  | django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'mysite.urls' from '/app/backend/proj/mysite/urls.py'>' does not appear to have any patterns in it. If you see the 'urlpatterns' variable with valid patterns in the file then the issue is probably caused by a circular import.
+backend_1  | /app/backend/proj/mysite/urls.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | Exception in thread django-main-thread:
+backend_1  | Traceback (most recent call last):
+backend_1  |   File "/usr/local/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+backend_1  |     self.run()
+backend_1  |   File "/usr/local/lib/python3.10/threading.py", line 953, in run
+backend_1  |     self._target(*self._args, **self._kwargs)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+backend_1  |     fn(*args, **kwargs)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+backend_1  |     self.check(display_num_errors=True)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/base.py", line 487, in check
+backend_1  |     all_issues = checks.run_checks(
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/registry.py", line 88, in run_checks
+backend_1  |     new_errors = check(app_configs=app_configs, databases=databases)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+backend_1  |     return check_resolver(resolver)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+backend_1  |     return check_method()
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 480, in check
+backend_1  |     for pattern in self.url_patterns:
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+backend_1  |     res = instance.__dict__[self.name] = self.func(instance)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+backend_1  |     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+backend_1  |     res = instance.__dict__[self.name] = self.func(instance)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+backend_1  |     return import_module(self.urlconf_name)
+backend_1  |   File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+backend_1  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend_1  |   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+backend_1  |   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+backend_1  |   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+backend_1  |   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+backend_1  |   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+backend_1  |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+backend_1  |   File "/app/backend/proj/proj/urls.py", line 22, in <module>
+backend_1  |     path('', include('mysite.urls'))
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 38, in include
+backend_1  |     urlconf_module = import_module(urlconf_module)
+backend_1  |   File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+backend_1  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend_1  |   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+backend_1  |   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+backend_1  |   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+backend_1  |   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+backend_1  |   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+backend_1  |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+backend_1  |   File "/app/backend/proj/mysite/urls.py", line 4, in <module>
+backend_1  |     path('', views.index),
+backend_1  | AttributeError: module 'mysite.views' has no attribute 'index'
+backend_1  | /app/backend/proj/mysite/views.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | 
+backend_1  | You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+backend_1  | Run 'python manage.py migrate' to apply them.
+backend_1  | July 05, 2022 - 19:38:44
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+backend_1  | Bad Request: /
+backend_1  | [05/Jul/2022 19:38:52] "GET / HTTP/1.1" 400 59186
+backend_1  | Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+backend_1  | Bad Request: /favicon.ico
+backend_1  | [05/Jul/2022 19:38:52] "GET /favicon.ico HTTP/1.1" 400 59100
+backend_1  | /app/backend/proj/proj/settings.py changed, reloading.
+backend_1  | Traceback (most recent call last):
+backend_1  |   File "/app/backend/proj/manage.py", line 22, in <module>
+backend_1  |     main()
+backend_1  |   File "/app/backend/proj/manage.py", line 18, in main
+backend_1  |     execute_from_command_line(sys.argv)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/__init__.py", line 446, in execute_from_command_line
+backend_1  |     utility.execute()
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/__init__.py", line 386, in execute
+backend_1  |     settings.INSTALLED_APPS
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/conf/__init__.py", line 87, in __getattr__
+backend_1  |     self._setup(name)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/conf/__init__.py", line 74, in _setup
+backend_1  |     self._wrapped = Settings(settings_module)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/conf/__init__.py", line 183, in __init__
+backend_1  |     mod = importlib.import_module(self.SETTINGS_MODULE)
+backend_1  |   File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+backend_1  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend_1  |   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+backend_1  |   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+backend_1  |   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+backend_1  |   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+backend_1  |   File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+backend_1  |   File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+backend_1  |   File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+backend_1  |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+backend_1  |   File "/app/backend/proj/proj/settings.py", line 28
+backend_1  |     ALLOWED_HOSTS = [0.0.0.0]
+backend_1  |                      ^^^^^
+backend_1  | SyntaxError: invalid syntax. Perhaps you forgot a comma?
+proj_backend_1 exited with code 1
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_db_1        ... done
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 2.2s (11/11) FINISHED                                                                                             
+ => [internal] load build definition from Dockerfile                                                                      0.0s
+ => => transferring dockerfile: 38B                                                                                       0.0s
+ => [internal] load .dockerignore                                                                                         0.0s
+ => => transferring context: 2B                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                            2.1s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d  0.0s
+ => [internal] load build context                                                                                         0.0s
+ => => transferring context: 4.42kB                                                                                       0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                             0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                              0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                           0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                 0.0s
+ => [stage-1 6/6] COPY proj /app/backend/                                                                                 0.0s
+ => exporting to image                                                                                                    0.0s
+ => => exporting layers                                                                                                   0.0s
+ => => writing image sha256:c176f51c654be8fa64fcfdf9857702fa29f4c2dd84e66cca0dfe7b00a162f9cf                              0.0s
+ => => naming to docker.io/library/proj_backend                                                                           0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Starting proj_db_1 ... done
+Recreating proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 19:39:30.162 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 19:39:30.162 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 19:39:30.162 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 19:39:30.166 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 19:39:30.171 UTC [26] LOG:  database system was shut down at 2022-07-05 19:39:25 UTC
+db_1       | 2022-07-05 19:39:30.177 UTC [1] LOG:  database system is ready to accept connections
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | 
+backend_1  | You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+backend_1  | Run 'python manage.py migrate' to apply them.
+backend_1  | July 05, 2022 - 19:39:31
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | [05/Jul/2022 19:39:35] "GET / HTTP/1.1" 200 4
+backend_1  | Not Found: /favicon.ico
+backend_1  | [05/Jul/2022 19:39:35] "GET /favicon.ico HTTP/1.1" 404 2147
+backend_1  | [05/Jul/2022 19:42:52] "GET / HTTP/1.1" 200 4
+backend_1  | [05/Jul/2022 19:42:54] "GET / HTTP/1.1" 200 4
+backend_1  | [05/Jul/2022 19:43:21] "GET / HTTP/1.1" 200 4
+backend_1  | /app/backend/proj/mysite/views.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | 
+backend_1  | You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+backend_1  | Run 'python manage.py migrate' to apply them.
+backend_1  | July 05, 2022 - 19:43:24
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | /app/backend/proj/mysite/views.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | 
+backend_1  | You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+backend_1  | Run 'python manage.py migrate' to apply them.
+backend_1  | July 05, 2022 - 19:43:35
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | [05/Jul/2022 19:43:35] "GET / HTTP/1.1" 200 13
+backend_1  | [05/Jul/2022 19:43:47] "GET / HTTP/1.1" 200 13
+backend_1  | [05/Jul/2022 19:43:48] "GET / HTTP/1.1" 200 13
+backend_1  | /app/backend/proj/mysite/views.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | 
+backend_1  | You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+backend_1  | Run 'python manage.py migrate' to apply them.
+backend_1  | July 05, 2022 - 19:43:51
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | /app/backend/proj/mysite/views.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | 
+backend_1  | You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+backend_1  | Run 'python manage.py migrate' to apply them.
+backend_1  | July 05, 2022 - 19:44:32
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | [05/Jul/2022 19:44:34] "GET / HTTP/1.1" 200 31
+backend_1  | /app/backend/proj/mysite/views.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | 
+backend_1  | You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+backend_1  | Run 'python manage.py migrate' to apply them.
+backend_1  | July 05, 2022 - 19:44:48
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | /app/backend/proj/mysite/models.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | 
+backend_1  | You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+backend_1  | Run 'python manage.py migrate' to apply them.
+backend_1  | July 05, 2022 - 19:45:54
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | [05/Jul/2022 19:46:04] "GET / HTTP/1.1" 200 31
+	^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_backend_1   ... 
+Stopping proj_db_1        ... 
+Killing proj_backend_1    ... done
+Killing proj_db_1         ... done
+ERROR: 2
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 2.2s (11/11) FINISHED                                                                                             
+ => [internal] load build definition from Dockerfile                                                                      0.0s
+ => => transferring dockerfile: 2.89kB                                                                                    0.0s
+ => [internal] load .dockerignore                                                                                         0.0s
+ => => transferring context: 2B                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                            2.0s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d  0.0s
+ => [internal] load build context                                                                                         0.0s
+ => => transferring context: 1.18kB                                                                                       0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                             0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                              0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                           0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                 0.0s
+ => [stage-1 6/6] COPY proj /app/backend/                                                                                 0.0s
+ => exporting to image                                                                                                    0.0s
+ => => exporting layers                                                                                                   0.0s
+ => => writing image sha256:222fc51fe3e75998889f41d683a3ea96d458792829f40230c91657506fa1739c                              0.0s
+ => => naming to docker.io/library/proj_backend                                                                           0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Starting proj_db_1 ... done
+Recreating proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 19:47:49.637 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 19:47:49.638 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 19:47:49.638 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 19:47:49.641 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 19:47:49.648 UTC [26] LOG:  database system was interrupted; last known up at 2022-07-05 19:44:30 UTC
+db_1       | 2022-07-05 19:47:49.715 UTC [26] LOG:  database system was not properly shut down; automatic recovery in progress
+db_1       | 2022-07-05 19:47:49.718 UTC [26] LOG:  redo starts at 0/16FBB70
+db_1       | 2022-07-05 19:47:49.718 UTC [26] LOG:  invalid record length at 0/16FBC58: wanted 24, got 0
+db_1       | 2022-07-05 19:47:49.718 UTC [26] LOG:  redo done at 0/16FBC20 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+db_1       | 2022-07-05 19:47:49.735 UTC [1] LOG:  database system is ready to accept connections
+backend_1  | Migrations for 'mysite':
+backend_1  |   mysite/migrations/0001_initial.py
+backend_1  |     - Create model Something
+backend_1  | Operations to perform:
+backend_1  |   Apply all migrations: admin, auth, contenttypes, mysite, sessions
+backend_1  | Running migrations:
+backend_1  |   Applying contenttypes.0001_initial... OK
+backend_1  |   Applying auth.0001_initial... OK
+backend_1  |   Applying admin.0001_initial... OK
+backend_1  |   Applying admin.0002_logentry_remove_auto_add... OK
+backend_1  |   Applying admin.0003_logentry_add_action_flag_choices... OK
+backend_1  |   Applying contenttypes.0002_remove_content_type_name... OK
+backend_1  |   Applying auth.0002_alter_permission_name_max_length... OK
+backend_1  |   Applying auth.0003_alter_user_email_max_length... OK
+backend_1  |   Applying auth.0004_alter_user_username_opts... OK
+backend_1  |   Applying auth.0005_alter_user_last_login_null... OK
+backend_1  |   Applying auth.0006_require_contenttypes_0002... OK
+backend_1  |   Applying auth.0007_alter_validators_add_error_messages... OK
+backend_1  |   Applying auth.0008_alter_user_username_max_length... OK
+backend_1  |   Applying auth.0009_alter_user_last_name_max_length... OK
+backend_1  |   Applying auth.0010_alter_group_name_max_length... OK
+backend_1  |   Applying auth.0011_update_proxy_permissions... OK
+backend_1  |   Applying auth.0012_alter_user_first_name_max_length... OK
+backend_1  |   Applying mysite.0001_initial... OK
+backend_1  |   Applying sessions.0001_initial... OK
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 19:47:52
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | [05/Jul/2022 19:47:57] "GET / HTTP/1.1" 200 31
+backend_1  | [05/Jul/2022 19:47:59] "GET / HTTP/1.1" 200 31
+backend_1  | [05/Jul/2022 19:48:00] "GET / HTTP/1.1" 200 31
+backend_1  | [05/Jul/2022 19:48:00] "GET / HTTP/1.1" 200 31
+backend_1  | [05/Jul/2022 19:48:00] "GET / HTTP/1.1" 200 31
+backend_1  | [05/Jul/2022 19:48:01] "GET / HTTP/1.1" 200 31
+backend_1  | [05/Jul/2022 19:48:01] "GET / HTTP/1.1" 200 31
+backend_1  | [05/Jul/2022 19:48:01] "GET / HTTP/1.1" 200 31
+backend_1  | [05/Jul/2022 19:48:02] "GET / HTTP/1.1" 200 31
+backend_1  | [05/Jul/2022 19:48:02] "GET / HTTP/1.1" 200 31
+backend_1  | [05/Jul/2022 19:48:02] "GET / HTTP/1.1" 200 31
+backend_1  | [05/Jul/2022 19:48:02] "GET / HTTP/1.1" 200 31
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_backend_1   ... 
+Stopping proj_db_1        ... 
+Killing proj_backend_1    ... done
+Killing proj_db_1         ... done
+ERROR: 2
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 1.2s (11/11) FINISHED                                                                                             
+ => [internal] load build definition from Dockerfile                                                                      0.0s
+ => => transferring dockerfile: 38B                                                                                       0.0s
+ => [internal] load .dockerignore                                                                                         0.0s
+ => => transferring context: 2B                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                            1.1s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d  0.0s
+ => [internal] load build context                                                                                         0.0s
+ => => transferring context: 1.25kB                                                                                       0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                             0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                              0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                           0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                 0.0s
+ => [stage-1 6/6] COPY proj /app/backend/                                                                                 0.0s
+ => exporting to image                                                                                                    0.0s
+ => => exporting layers                                                                                                   0.0s
+ => => writing image sha256:0ddbf7a66faf54805cde0c8e8aa398c397abff3fe68381d62f5833b978407648                              0.0s
+ => => naming to docker.io/library/proj_backend                                                                           0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Starting proj_db_1 ... done
+Recreating proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 19:51:13.019 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 19:51:13.020 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 19:51:13.020 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 19:51:13.023 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 19:51:13.030 UTC [26] LOG:  database system was interrupted; last known up at 2022-07-05 19:47:49 UTC
+db_1       | 2022-07-05 19:51:13.101 UTC [26] LOG:  database system was not properly shut down; automatic recovery in progress
+db_1       | 2022-07-05 19:51:13.104 UTC [26] LOG:  redo starts at 0/16FBCD0
+db_1       | 2022-07-05 19:51:13.108 UTC [26] LOG:  invalid record length at 0/1776FF8: wanted 24, got 0
+db_1       | 2022-07-05 19:51:13.108 UTC [26] LOG:  redo done at 0/1776FC0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+db_1       | 2022-07-05 19:51:13.137 UTC [1] LOG:  database system is ready to accept connections
+backend_1  | No changes detected
+backend_1  | Operations to perform:
+backend_1  |   Apply all migrations: admin, auth, contenttypes, mysite, sessions
+backend_1  | Running migrations:
+backend_1  |   No migrations to apply.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 19:51:15
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | [05/Jul/2022 19:52:40] "GET / HTTP/1.1" 200 31
+backend_1  | Not Found: /admin
+backend_1  | [05/Jul/2022 19:52:45] "GET /admin HTTP/1.1" 404 2129
+backend_1  | Not Found: /admin/
+backend_1  | [05/Jul/2022 19:53:38] "GET /admin/ HTTP/1.1" 404 2132
+backend_1  | /app/backend/proj/proj/urls.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 19:53:52
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | [05/Jul/2022 19:53:55] "GET /admin/ HTTP/1.1" 302 0
+backend_1  | [05/Jul/2022 19:53:55] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2215
+backend_1  | [05/Jul/2022 19:53:55] "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+backend_1  | [05/Jul/2022 19:53:55] "GET /static/admin/css/login.css HTTP/1.1" 200 954
+backend_1  | [05/Jul/2022 19:53:55] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2616
+backend_1  | [05/Jul/2022 19:53:55] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3763
+backend_1  | [05/Jul/2022 19:53:55] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18575
+backend_1  | [05/Jul/2022 19:53:55] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+backend_1  | [05/Jul/2022 19:53:55] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+backend_1  | [05/Jul/2022 19:53:55] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_backend_1   ... 
+Stopping proj_db_1        ... 
+Killing proj_backend_1    ... done
+Killing proj_db_1         ... done
+ERROR: 2
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose -t first build
+Define and run multi-container applications with Docker.
+
+Usage:
+  docker-compose [-f <arg>...] [--profile <name>...] [options] [--] [COMMAND] [ARGS...]
+  docker-compose -h|--help
+
+Options:
+  -f, --file FILE             Specify an alternate compose file
+                              (default: docker-compose.yml)
+  -p, --project-name NAME     Specify an alternate project name
+                              (default: directory name)
+  --profile NAME              Specify a profile to enable
+  -c, --context NAME          Specify a context name
+  --verbose                   Show more output
+  --log-level LEVEL           Set log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  --ansi (never|always|auto)  Control when to print ANSI control characters
+  --no-ansi                   Do not print ANSI control characters (DEPRECATED)
+  -v, --version               Print version and exit
+  -H, --host HOST             Daemon socket to connect to
+
+  --tls                       Use TLS; implied by --tlsverify
+  --tlscacert CA_PATH         Trust certs signed only by this CA
+  --tlscert CLIENT_CERT_PATH  Path to TLS certificate file
+  --tlskey TLS_KEY_PATH       Path to TLS key file
+  --tlsverify                 Use TLS and verify the remote
+  --skip-hostname-check       Don't check the daemon's hostname against the
+                              name specified in the client certificate
+  --project-directory PATH    Specify an alternate working directory
+                              (default: the path of the Compose file)
+  --compatibility             If set, Compose will attempt to convert keys
+                              in v3 files to their non-Swarm equivalent (DEPRECATED)
+  --env-file PATH             Specify an alternate environment file
+
+Commands:
+  build              Build or rebuild services
+  config             Validate and view the Compose file
+  create             Create services
+  down               Stop and remove resources
+  events             Receive real time events from containers
+  exec               Execute a command in a running container
+  help               Get help on a command
+  images             List images
+  kill               Kill containers
+  logs               View output from containers
+  pause              Pause services
+  port               Print the public port for a port binding
+  ps                 List containers
+  pull               Pull service images
+  push               Push service images
+  restart            Restart services
+  rm                 Remove stopped containers
+  run                Run a one-off command
+  scale              Set number of containers for a service
+  start              Start services
+  stop               Stop services
+  top                Display the running processes
+  unpause            Unpause services
+  up                 Create and start containers
+  version            Show version information and quit
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker compose up
+[+] Running 2/1
+ ⠿ Container proj_db_1       Recreated                                                                                    0.1s
+ ⠿ Container proj_backend_1  Recreated                                                                                    0.1s
+Attaching to proj-backend-1, proj-db-1
+proj-db-1       | 
+proj-db-1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+proj-db-1       | 
+proj-db-1       | 2022-07-05 19:58:52.150 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+proj-db-1       | 2022-07-05 19:58:52.150 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+proj-db-1       | 2022-07-05 19:58:52.150 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+proj-db-1       | 2022-07-05 19:58:52.154 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+proj-db-1       | 2022-07-05 19:58:52.160 UTC [26] LOG:  database system was interrupted; last known up at 2022-07-05 19:51:13 UTC
+proj-db-1       | 2022-07-05 19:58:52.210 UTC [26] LOG:  database system was not properly shut down; automatic recovery in progress
+proj-db-1       | 2022-07-05 19:58:52.213 UTC [26] LOG:  redo starts at 0/1777070
+proj-db-1       | 2022-07-05 19:58:52.213 UTC [26] LOG:  invalid record length at 0/17770A8: wanted 24, got 0
+proj-db-1       | 2022-07-05 19:58:52.213 UTC [26] LOG:  redo done at 0/1777070 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+proj-db-1       | 2022-07-05 19:58:52.229 UTC [1] LOG:  database system is ready to accept connections
+proj-backend-1  | No changes detected
+proj-backend-1  | Operations to perform:
+proj-backend-1  |   Apply all migrations: admin, auth, contenttypes, mysite, sessions
+proj-backend-1  | Running migrations:
+proj-backend-1  |   No migrations to apply.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | System check identified no issues (0 silenced).
+proj-backend-1  | July 05, 2022 - 19:58:54
+proj-backend-1  | Django version 4.0.5, using settings 'proj.settings'
+proj-backend-1  | Starting development server at http://0.0.0.0:8000/
+proj-backend-1  | Quit the server with CONTROL-C.
+proj-backend-1  | /app/backend/proj/mysite/views.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | Exception in thread django-main-thread:
+proj-backend-1  | Traceback (most recent call last):
+proj-backend-1  |   File "/usr/local/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+proj-backend-1  |     self.run()
+proj-backend-1  |   File "/usr/local/lib/python3.10/threading.py", line 953, in run
+proj-backend-1  |     self._target(*self._args, **self._kwargs)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+proj-backend-1  |     fn(*args, **kwargs)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+proj-backend-1  |     self.check(display_num_errors=True)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/base.py", line 487, in check
+proj-backend-1  |     all_issues = checks.run_checks(
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/registry.py", line 88, in run_checks
+proj-backend-1  |     new_errors = check(app_configs=app_configs, databases=databases)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+proj-backend-1  |     all_namespaces = _load_all_namespaces(resolver)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+proj-backend-1  |     url_patterns = getattr(resolver, "url_patterns", [])
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+proj-backend-1  |     res = instance.__dict__[self.name] = self.func(instance)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+proj-backend-1  |     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+proj-backend-1  |     res = instance.__dict__[self.name] = self.func(instance)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+proj-backend-1  |     return import_module(self.urlconf_name)
+proj-backend-1  |   File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+proj-backend-1  |     return _bootstrap._gcd_import(name[level:], package, level)
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+proj-backend-1  |   File "/app/backend/proj/proj/urls.py", line 22, in <module>
+proj-backend-1  |     path('', include('mysite.urls'))
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 38, in include
+proj-backend-1  |     urlconf_module = import_module(urlconf_module)
+proj-backend-1  |   File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+proj-backend-1  |     return _bootstrap._gcd_import(name[level:], package, level)
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+proj-backend-1  |   File "/app/backend/proj/mysite/urls.py", line 2, in <module>
+proj-backend-1  |     from . import views
+proj-backend-1  |   File "/app/backend/proj/mysite/views.py", line 23
+proj-backend-1  |     return HttpResponse('<h1 style='color:green'>Saved Data</h1>')
+proj-backend-1  |                         ^^^^^^^^^^^^^^^^^
+proj-backend-1  | SyntaxError: invalid syntax. Perhaps you forgot a comma?
+proj-backend-1  | /app/backend/proj/mysite/views.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | System check identified no issues (0 silenced).
+proj-backend-1  | July 05, 2022 - 20:02:12
+proj-backend-1  | Django version 4.0.5, using settings 'proj.settings'
+proj-backend-1  | Starting development server at http://0.0.0.0:8000/
+proj-backend-1  | Quit the server with CONTROL-C.
+proj-backend-1  | /app/backend/proj/mysite/views.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | Exception in thread django-main-thread:
+proj-backend-1  | Traceback (most recent call last):
+proj-backend-1  |   File "/usr/local/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+proj-backend-1  |     self.run()
+proj-backend-1  |   File "/usr/local/lib/python3.10/threading.py", line 953, in run
+proj-backend-1  |     self._target(*self._args, **self._kwargs)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+proj-backend-1  |     fn(*args, **kwargs)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+proj-backend-1  |     self.check(display_num_errors=True)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/base.py", line 487, in check
+proj-backend-1  |     all_issues = checks.run_checks(
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/registry.py", line 88, in run_checks
+proj-backend-1  |     new_errors = check(app_configs=app_configs, databases=databases)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+proj-backend-1  |     all_namespaces = _load_all_namespaces(resolver)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+proj-backend-1  |     url_patterns = getattr(resolver, "url_patterns", [])
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+proj-backend-1  |     res = instance.__dict__[self.name] = self.func(instance)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+proj-backend-1  |     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+proj-backend-1  |     res = instance.__dict__[self.name] = self.func(instance)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+proj-backend-1  |     return import_module(self.urlconf_name)
+proj-backend-1  |   File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+proj-backend-1  |     return _bootstrap._gcd_import(name[level:], package, level)
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+proj-backend-1  |   File "/app/backend/proj/proj/urls.py", line 22, in <module>
+proj-backend-1  |     path('', include('mysite.urls'))
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 38, in include
+proj-backend-1  |     urlconf_module = import_module(urlconf_module)
+proj-backend-1  |   File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+proj-backend-1  |     return _bootstrap._gcd_import(name[level:], package, level)
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+proj-backend-1  |   File "/app/backend/proj/mysite/urls.py", line 2, in <module>
+proj-backend-1  |     from . import views
+proj-backend-1  |   File "/app/backend/proj/mysite/views.py", line 26
+proj-backend-1  |     return HttpResponse("<h1 style='color:red'>Something went wrong</h1>"))
+proj-backend-1  |                                                                           ^
+proj-backend-1  | SyntaxError: unmatched ')'
+proj-backend-1  | /app/backend/proj/mysite/views.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | Exception in thread django-main-thread:
+proj-backend-1  | Traceback (most recent call last):
+proj-backend-1  |   File "/usr/local/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+proj-backend-1  |     self.run()
+proj-backend-1  |   File "/usr/local/lib/python3.10/threading.py", line 953, in run
+proj-backend-1  |     self._target(*self._args, **self._kwargs)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+proj-backend-1  |     fn(*args, **kwargs)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+proj-backend-1  |     self.check(display_num_errors=True)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/management/base.py", line 487, in check
+proj-backend-1  |     all_issues = checks.run_checks(
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/registry.py", line 88, in run_checks
+proj-backend-1  |     new_errors = check(app_configs=app_configs, databases=databases)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+proj-backend-1  |     all_namespaces = _load_all_namespaces(resolver)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+proj-backend-1  |     url_patterns = getattr(resolver, "url_patterns", [])
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+proj-backend-1  |     res = instance.__dict__[self.name] = self.func(instance)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+proj-backend-1  |     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+proj-backend-1  |     res = instance.__dict__[self.name] = self.func(instance)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+proj-backend-1  |     return import_module(self.urlconf_name)
+proj-backend-1  |   File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+proj-backend-1  |     return _bootstrap._gcd_import(name[level:], package, level)
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+proj-backend-1  |   File "/app/backend/proj/proj/urls.py", line 22, in <module>
+proj-backend-1  |     path('', include('mysite.urls'))
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 38, in include
+proj-backend-1  |     urlconf_module = import_module(urlconf_module)
+proj-backend-1  |   File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+proj-backend-1  |     return _bootstrap._gcd_import(name[level:], package, level)
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+proj-backend-1  |   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+proj-backend-1  |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+proj-backend-1  |   File "/app/backend/proj/mysite/urls.py", line 2, in <module>
+proj-backend-1  |     from . import views
+proj-backend-1  |   File "/app/backend/proj/mysite/views.py", line 27
+proj-backend-1  |     return HttpResponse("<h1 style='color:red'>Something went wrong</h1>"))
+proj-backend-1  |                                                                           ^
+proj-backend-1  | SyntaxError: unmatched ')'
+proj-backend-1  | /app/backend/proj/mysite/views.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | System check identified no issues (0 silenced).
+proj-backend-1  | July 05, 2022 - 20:03:15
+proj-backend-1  | Django version 4.0.5, using settings 'proj.settings'
+proj-backend-1  | Starting development server at http://0.0.0.0:8000/
+proj-backend-1  | Quit the server with CONTROL-C.
+proj-backend-1  | /app/backend/proj/mysite/urls.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | System check identified no issues (0 silenced).
+proj-backend-1  | July 05, 2022 - 20:03:36
+proj-backend-1  | Django version 4.0.5, using settings 'proj.settings'
+proj-backend-1  | Starting development server at http://0.0.0.0:8000/
+proj-backend-1  | Quit the server with CONTROL-C.
+proj-backend-1  | /app/backend/proj/mysite/views.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | System check identified no issues (0 silenced).
+proj-backend-1  | July 05, 2022 - 20:03:57
+proj-backend-1  | Django version 4.0.5, using settings 'proj.settings'
+proj-backend-1  | Starting development server at http://0.0.0.0:8000/
+proj-backend-1  | Quit the server with CONTROL-C.
+proj-backend-1  | [05/Jul/2022 20:06:50] "GET / HTTP/1.1" 200 32
+proj-backend-1  | [05/Jul/2022 20:07:08] "GET /enter_data/ HTTP/1.1" 200 47
+proj-backend-1  | Internal Server Error: /enter_data/
+proj-backend-1  | Traceback (most recent call last):
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+proj-backend-1  |     list_ = super().__getitem__(key)
+proj-backend-1  | KeyError: 'name_inp'
+proj-backend-1  | 
+proj-backend-1  | During handling of the above exception, another exception occurred:
+proj-backend-1  | 
+proj-backend-1  | Traceback (most recent call last):
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+proj-backend-1  |     response = get_response(request)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+proj-backend-1  |     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+proj-backend-1  |     return view_func(*args, **kwargs)
+proj-backend-1  |   File "/app/backend/proj/mysite/views.py", line 19, in enter_data
+proj-backend-1  |     name_inp = request.POST['name_inp']
+proj-backend-1  |   File "/usr/local/lib/python3.10/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+proj-backend-1  |     raise MultiValueDictKeyError(key)
+proj-backend-1  | django.utils.datastructures.MultiValueDictKeyError: 'name_inp'
+proj-backend-1  | [05/Jul/2022 20:07:13] "POST /enter_data/ HTTP/1.1" 500 65747
+proj-backend-1  | [05/Jul/2022 20:07:35] "POST /enter_data/ HTTP/1.1" 200 39
+proj-backend-1  | /app/backend/proj/mysite/views.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | System check identified no issues (0 silenced).
+proj-backend-1  | July 05, 2022 - 20:08:51
+proj-backend-1  | Django version 4.0.5, using settings 'proj.settings'
+proj-backend-1  | Starting development server at http://0.0.0.0:8000/
+proj-backend-1  | Quit the server with CONTROL-C.
+proj-backend-1  | /app/backend/proj/mysite/views.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | System check identified no issues (0 silenced).
+proj-backend-1  | July 05, 2022 - 20:09:07
+proj-backend-1  | Django version 4.0.5, using settings 'proj.settings'
+proj-backend-1  | Starting development server at http://0.0.0.0:8000/
+proj-backend-1  | Quit the server with CONTROL-C.
+proj-backend-1  | /app/backend/proj/mysite/urls.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | System check identified no issues (0 silenced).
+proj-backend-1  | July 05, 2022 - 20:09:33
+proj-backend-1  | Django version 4.0.5, using settings 'proj.settings'
+proj-backend-1  | Starting development server at http://0.0.0.0:8000/
+proj-backend-1  | Quit the server with CONTROL-C.
+proj-backend-1  | [05/Jul/2022 20:09:42] "GET /get_data/ HTTP/1.1" 200 46
+proj-backend-1  | [05/Jul/2022 20:10:27] "GET /get_data/ HTTP/1.1" 200 46
+proj-backend-1  | [05/Jul/2022 20:10:28] "GET /get_data/ HTTP/1.1" 200 46
+proj-backend-1  | [05/Jul/2022 20:10:28] "GET /get_data/ HTTP/1.1" 200 46
+proj-backend-1  | [05/Jul/2022 20:10:28] "GET /get_data/ HTTP/1.1" 200 46
+proj-backend-1  | [05/Jul/2022 20:10:29] "GET /get_data/ HTTP/1.1" 200 46
+proj-backend-1  | /app/backend/proj/mysite/views.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | System check identified no issues (0 silenced).
+proj-backend-1  | July 05, 2022 - 20:10:30
+proj-backend-1  | Django version 4.0.5, using settings 'proj.settings'
+proj-backend-1  | Starting development server at http://0.0.0.0:8000/
+proj-backend-1  | Quit the server with CONTROL-C.
+proj-backend-1  | [05/Jul/2022 20:10:30] "GET /get_data/ HTTP/1.1" 200 46
+proj-backend-1  | [05/Jul/2022 20:10:40] "GET /get_data/ HTTP/1.1" 200 46
+proj-backend-1  | /app/backend/proj/mysite/views.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | System check identified no issues (0 silenced).
+proj-backend-1  | July 05, 2022 - 20:10:56
+proj-backend-1  | Django version 4.0.5, using settings 'proj.settings'
+proj-backend-1  | Starting development server at http://0.0.0.0:8000/
+proj-backend-1  | Quit the server with CONTROL-C.
+proj-backend-1  | <QuerySet [<Something: Something object (1)>]>
+proj-backend-1  | [05/Jul/2022 20:10:57] "GET /get_data/ HTTP/1.1" 200 46
+proj-backend-1  | /app/backend/proj/mysite/views.py changed, reloading.
+proj-backend-1  | Watching for file changes with StatReloader
+proj-backend-1  | Performing system checks...
+proj-backend-1  | 
+proj-backend-1  | System check identified no issues (0 silenced).
+proj-backend-1  | July 05, 2022 - 20:12:38
+proj-backend-1  | Django version 4.0.5, using settings 'proj.settings'
+proj-backend-1  | Starting development server at http://0.0.0.0:8000/
+proj-backend-1  | Quit the server with CONTROL-C.
+proj-backend-1  | <QuerySet [<Something: Something object (1)>]>
+proj-backend-1  | [05/Jul/2022 20:12:39] "GET /get_data/ HTTP/1.1" 200 46
+^CGracefully stopping... (press Ctrl+C again to force)
+[+] Running 0/1
+ ⠙ Container proj-backend-1  Stopping                                                                                     8.2s
+[+] Running 2/2
+[+] Running 2/1oj-backend-1  Killed                                                                                       0.2s
+ ⠿ Container proj-backend-1  Stopped                                                                                      8.3s
+ ⠿ Container proj-db-1       Stopped                                                                                      0.0s
+canceled
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker ps
+CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS                NAMES
+dc3e1840ff6b   docker/getting-started   "/docker-entrypoint.…"   46 minutes ago   Up 46 minutes   0.0.0.0:80->80/tcp   kind_nightingale
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose -t first build
+Define and run multi-container applications with Docker.
+
+Usage:
+  docker-compose [-f <arg>...] [--profile <name>...] [options] [--] [COMMAND] [ARGS...]
+  docker-compose -h|--help
+
+Options:
+  -f, --file FILE             Specify an alternate compose file
+                              (default: docker-compose.yml)
+  -p, --project-name NAME     Specify an alternate project name
+                              (default: directory name)
+  --profile NAME              Specify a profile to enable
+  -c, --context NAME          Specify a context name
+  --verbose                   Show more output
+  --log-level LEVEL           Set log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  --ansi (never|always|auto)  Control when to print ANSI control characters
+  --no-ansi                   Do not print ANSI control characters (DEPRECATED)
+  -v, --version               Print version and exit
+  -H, --host HOST             Daemon socket to connect to
+
+  --tls                       Use TLS; implied by --tlsverify
+  --tlscacert CA_PATH         Trust certs signed only by this CA
+  --tlscert CLIENT_CERT_PATH  Path to TLS certificate file
+  --tlskey TLS_KEY_PATH       Path to TLS key file
+  --tlsverify                 Use TLS and verify the remote
+  --skip-hostname-check       Don't check the daemon's hostname against the
+                              name specified in the client certificate
+  --project-directory PATH    Specify an alternate working directory
+                              (default: the path of the Compose file)
+  --compatibility             If set, Compose will attempt to convert keys
+                              in v3 files to their non-Swarm equivalent (DEPRECATED)
+  --env-file PATH             Specify an alternate environment file
+
+Commands:
+  build              Build or rebuild services
+  config             Validate and view the Compose file
+  create             Create services
+  down               Stop and remove resources
+  events             Receive real time events from containers
+  exec               Execute a command in a running container
+  help               Get help on a command
+  images             List images
+  kill               Kill containers
+  logs               View output from containers
+  pause              Pause services
+  port               Print the public port for a port binding
+  ps                 List containers
+  pull               Pull service images
+  push               Push service images
+  restart            Restart services
+  rm                 Remove stopped containers
+  run                Run a one-off command
+  scale              Set number of containers for a service
+  start              Start services
+  stop               Stop services
+  top                Display the running processes
+  unpause            Unpause services
+  up                 Create and start containers
+  version            Show version information and quit
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up -t Name --build
+Traceback (most recent call last):
+  File "/usr/bin/docker-compose", line 33, in <module>
+    sys.exit(load_entry_point('docker-compose==1.29.2', 'console_scripts', 'docker-compose')())
+  File "/usr/lib/python3/dist-packages/compose/cli/main.py", line 81, in main
+    command_func()
+  File "/usr/lib/python3/dist-packages/compose/cli/main.py", line 203, in perform_command
+    handler(command, command_options)
+  File "/usr/lib/python3/dist-packages/compose/metrics/decorator.py", line 18, in wrapper
+    result = fn(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/compose/cli/main.py", line 1140, in up
+    timeout = timeout_from_opts(options)
+  File "/usr/lib/python3/dist-packages/compose/cli/main.py", line 1300, in timeout_from_opts
+    return None if timeout is None else int(timeout)
+ValueError: invalid literal for int() with base 10: 'Name'
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --name=Name --build
+Builds, (re)creates, starts, and attaches to containers for a service.
+
+Unless they are already running, this command also starts any linked services.
+
+The `docker-compose up` command aggregates the output of each container. When
+the command exits, all containers are stopped. Running `docker-compose up -d`
+starts the containers in the background and leaves them running.
+
+If there are existing containers for a service, and the service's configuration
+or image was changed after the container's creation, `docker-compose up` picks
+up the changes by stopping and recreating the containers (preserving mounted
+volumes). To prevent Compose from picking up changes, use the `--no-recreate`
+flag.
+
+If you want to force Compose to stop and recreate all containers, use the
+`--force-recreate` flag.
+
+Usage: up [options] [--scale SERVICE=NUM...] [--] [SERVICE...]
+
+Options:
+    -d, --detach               Detached mode: Run containers in the background,
+                               print new container names. Incompatible with
+                               --abort-on-container-exit.
+    --no-color                 Produce monochrome output.
+    --quiet-pull               Pull without printing progress information
+    --no-deps                  Don't start linked services.
+    --force-recreate           Recreate containers even if their configuration
+                               and image haven't changed.
+    --always-recreate-deps     Recreate dependent containers.
+                               Incompatible with --no-recreate.
+    --no-recreate              If containers already exist, don't recreate
+                               them. Incompatible with --force-recreate and -V.
+    --no-build                 Don't build an image, even if it's missing.
+    --no-start                 Don't start the services after creating them.
+    --build                    Build images before starting containers.
+    --abort-on-container-exit  Stops all containers if any container was
+                               stopped. Incompatible with -d.
+    --attach-dependencies      Attach to dependent containers.
+    -t, --timeout TIMEOUT      Use this timeout in seconds for container
+                               shutdown when attached or when containers are
+                               already running. (default: 10)
+    -V, --renew-anon-volumes   Recreate anonymous volumes instead of retrieving
+                               data from the previous containers.
+    --remove-orphans           Remove containers for services not defined
+                               in the Compose file.
+    --exit-code-from SERVICE   Return the exit code of the selected service
+                               container. Implies --abort-on-container-exit.
+    --scale SERVICE=NUM        Scale SERVICE to NUM instances. Overrides the
+                               `scale` setting in the Compose file if present.
+    --no-log-prefix            Don't print prefix in logs.
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 2.5s (11/11) FINISHED                                                                                                                                                            
+ => [internal] load build definition from Dockerfile                                                                                                                                     0.0s
+ => => transferring dockerfile: 38B                                                                                                                                                      0.0s
+ => [internal] load .dockerignore                                                                                                                                                        0.0s
+ => => transferring context: 2B                                                                                                                                                          0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                                                                                           2.3s
+ => [internal] load build context                                                                                                                                                        0.0s
+ => => transferring context: 2.65kB                                                                                                                                                      0.0s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d8c5f                                                             0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                                                                                            0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                                                                                             0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                                                                                          0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                                                                                0.0s
+ => [stage-1 6/6] COPY proj /app/backend/                                                                                                                                                0.0s
+ => exporting to image                                                                                                                                                                   0.0s
+ => => exporting layers                                                                                                                                                                  0.0s
+ => => writing image sha256:dbf3a2d17322488dc26ce2d632a750ddaf27607be0d1e3c4d7c924c3a566abcf                                                                                             0.0s
+ => => naming to docker.io/library/proj_backend                                                                                                                                          0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Recreating proj-db-1 ... done
+Recreating proj-backend-1 ... done
+Attaching to proj_db_1, proj_backend_1
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 20:15:03.677 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 20:15:03.677 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 20:15:03.677 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 20:15:03.681 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 20:15:03.687 UTC [27] LOG:  database system was interrupted; last known up at 2022-07-05 20:08:55 UTC
+db_1       | 2022-07-05 20:15:03.764 UTC [27] LOG:  database system was not properly shut down; automatic recovery in progress
+db_1       | 2022-07-05 20:15:03.766 UTC [27] LOG:  redo starts at 0/1777308
+db_1       | 2022-07-05 20:15:03.767 UTC [27] LOG:  invalid record length at 0/17773F0: wanted 24, got 0
+db_1       | 2022-07-05 20:15:03.767 UTC [27] LOG:  redo done at 0/17773B8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+db_1       | 2022-07-05 20:15:03.783 UTC [1] LOG:  database system is ready to accept connections
+backend_1  | No changes detected
+backend_1  | Operations to perform:
+backend_1  |   Apply all migrations: admin, auth, contenttypes, mysite, sessions
+backend_1  | Running migrations:
+backend_1  |   No migrations to apply.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 20:15:06
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | <QuerySet [<Something: Something object (1)>]>
+backend_1  | [05/Jul/2022 20:15:15] "GET /get_data/ HTTP/1.1" 200 46
+backend_1  | [05/Jul/2022 20:15:26] "POST /enter_data/ HTTP/1.1" 200 39
+backend_1  | <QuerySet [<Something: Something object (1)>, <Something: Something object (2)>]>
+backend_1  | [05/Jul/2022 20:15:52] "GET /get_data/ HTTP/1.1" 200 81
+backend_1  | <QuerySet [<Something: Something object (1)>, <Something: Something object (2)>]>
+backend_1  | [05/Jul/2022 20:16:36] "GET /get_data/ HTTP/1.1" 200 81
+backend_1  | /app/backend/proj/mysite/views.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 20:16:37
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | Internal Server Error: /get_data/
+backend_1  | Traceback (most recent call last):
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+backend_1  |     response = get_response(request)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+backend_1  |     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+backend_1  |     return view_func(*args, **kwargs)
+backend_1  |   File "/app/backend/proj/mysite/views.py", line 32, in get_data
+backend_1  |     data = str(Something.objects.name.only())
+backend_1  | AttributeError: 'str' object has no attribute 'only'
+backend_1  | [05/Jul/2022 20:16:47] "GET /get_data/ HTTP/1.1" 500 58425
+backend_1  | Internal Server Error: /get_data/
+backend_1  | Traceback (most recent call last):
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+backend_1  |     response = get_response(request)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+backend_1  |     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+backend_1  |   File "/usr/local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+backend_1  |     return view_func(*args, **kwargs)
+backend_1  |   File "/app/backend/proj/mysite/views.py", line 32, in get_data
+backend_1  |     data = str(Something.objects.name)
+backend_1  | AttributeError: 'str' object has no attribute 'only'
+backend_1  | [05/Jul/2022 20:17:07] "GET /get_data/ HTTP/1.1" 500 58418
+backend_1  | /app/backend/proj/mysite/views.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 20:17:09
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | objects
+backend_1  | [05/Jul/2022 20:17:14] "GET /get_data/ HTTP/1.1" 200 7
+backend_1  | objects
+backend_1  | [05/Jul/2022 20:18:09] "GET /get_data/ HTTP/1.1" 200 7
+backend_1  | objects
+backend_1  | [05/Jul/2022 20:18:10] "GET /get_data/ HTTP/1.1" 200 7
+backend_1  | objects
+backend_1  | [05/Jul/2022 20:18:10] "GET /get_data/ HTTP/1.1" 200 7
+backend_1  | objects
+backend_1  | [05/Jul/2022 20:18:10] "GET /get_data/ HTTP/1.1" 200 7
+backend_1  | objects
+backend_1  | [05/Jul/2022 20:18:11] "GET /get_data/ HTTP/1.1" 200 7
+backend_1  | /app/backend/proj/mysite/views.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 20:19:26
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | objects
+backend_1  | [05/Jul/2022 20:19:27] "GET /get_data/ HTTP/1.1" 200 10
+backend_1  | /app/backend/proj/mysite/views.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 20:19:42
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+backend_1  | /app/backend/proj/mysite/views.py changed, reloading.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 20:19:53
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+db_1       | 2022-07-05 20:21:10.180 UTC [1] LOG:  received fast shutdown request
+db_1       | 2022-07-05 20:21:10.182 UTC [1] LOG:  aborting any active transactions
+db_1       | 2022-07-05 20:21:10.184 UTC [51] FATAL:  terminating connection due to administrator command
+db_1       | 2022-07-05 20:21:10.186 UTC [1] LOG:  background worker "logical replication launcher" (PID 33) exited with exit code 1
+db_1       | 2022-07-05 20:21:10.186 UTC [28] LOG:  shutting down
+db_1       | 2022-07-05 20:21:10.205 UTC [1] LOG:  database system is shut down
+proj_db_1 exited with code 0
+proj_backend_1 exited with code 137
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ gpg --generate-key
+gpg (GnuPG) 2.2.27; Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Note: Use "gpg --full-generate-key" for a full featured key generation dialog.
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: prakashbadugu
+Email address: baduguprakash.2221@gmail.com
+You selected this USER-ID:
+    "prakashbadugu <baduguprakash.2221@gmail.com>"
+
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? O
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: key AF36D9EB8A6A6F00 marked as ultimately trusted
+gpg: directory '/home/dolby/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/home/dolby/.gnupg/openpgp-revocs.d/8C2B79E1BAC9E473D2B19283AF36D9EB8A6A6F00.rev'
+public and secret key created and signed.
+
+pub   rsa3072 2022-07-05 [SC] [expires: 2024-07-04]
+      8C2B79E1BAC9E473D2B19283AF36D9EB8A6A6F00
+uid                      prakashbadugu <baduguprakash.2221@gmail.com>
+sub   rsa3072 2022-07-05 [E] [expires: 2024-07-04]
+
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ pass init 7865BA9185AFA2C26C5B505669FC4F36530097C2
+mkdir: created directory '/home/dolby/.password-store/'
+Password store initialized for 7865BA9185AFA2C26C5B505669FC4F36530097C2
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 3.4s (11/11) FINISHED                                                                                                
+ => [internal] load build definition from Dockerfile                                                                         0.0s
+ => => transferring dockerfile: 38B                                                                                          0.0s
+ => [internal] load .dockerignore                                                                                            0.0s
+ => => transferring context: 2B                                                                                              0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                               3.2s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d8c5  0.0s
+ => [internal] load build context                                                                                            0.0s
+ => => transferring context: 1.69kB                                                                                          0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                                0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                                 0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                              0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                    0.0s
+ => [stage-1 6/6] COPY proj /app/backend/                                                                                    0.0s
+ => exporting to image                                                                                                       0.0s
+ => => exporting layers                                                                                                      0.0s
+ => => writing image sha256:aaec94576b3a83707a75d93100212f32db1fa0147c3b2a963b68920b3fb7cfd5                                 0.0s
+ => => naming to docker.io/library/proj_backend                                                                              0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Starting proj_db_1 ... done
+Creating proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 20:39:27.704 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 20:39:27.704 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 20:39:27.704 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 20:39:27.712 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 20:39:27.737 UTC [26] LOG:  database system was shut down at 2022-07-05 20:21:10 UTC
+db_1       | 2022-07-05 20:39:27.745 UTC [1] LOG:  database system is ready to accept connections
+backend_1  | No changes detected
+backend_1  | Operations to perform:
+backend_1  |   Apply all migrations: admin, auth, contenttypes, mysite, sessions
+backend_1  | Running migrations:
+backend_1  |   No migrations to apply.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 20:39:30
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_backend_1 ... 
+Stopping proj_db_1      ... 
+Killing proj_backend_1  ... done
+Killing proj_db_1       ... done
+ERROR: 2
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 2.7s (12/12) FINISHED                                                                                                
+ => [internal] load build definition from Dockerfile                                                                         0.0s
+ => => transferring dockerfile: 3.00kB                                                                                       0.0s
+ => [internal] load .dockerignore                                                                                            0.0s
+ => => transferring context: 2B                                                                                              0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                               2.6s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                0.0s
+ => [internal] load build context                                                                                            0.0s
+ => => transferring context: 773B                                                                                            0.0s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d8c5  0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                                0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                                 0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                              0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                    0.0s
+ => CACHED [stage-1 6/6] COPY proj /app/backend/                                                                             0.0s
+ => exporting to image                                                                                                       0.0s
+ => => exporting layers                                                                                                      0.0s
+ => => writing image sha256:aaec94576b3a83707a75d93100212f32db1fa0147c3b2a963b68920b3fb7cfd5                                 0.0s
+ => => naming to docker.io/library/proj_backend                                                                              0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Recreating proj_db_1 ... done
+Recreating proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 20:58:40.355 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 20:58:40.355 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 20:58:40.355 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 20:58:40.360 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 20:58:40.367 UTC [26] LOG:  database system was interrupted; last known up at 2022-07-05 20:44:27 UTC
+db_1       | 2022-07-05 20:58:40.468 UTC [26] LOG:  database system was not properly shut down; automatic recovery in progress
+db_1       | 2022-07-05 20:58:40.471 UTC [26] LOG:  redo starts at 0/1777830
+db_1       | 2022-07-05 20:58:40.471 UTC [26] LOG:  invalid record length at 0/1777918: wanted 24, got 0
+db_1       | 2022-07-05 20:58:40.471 UTC [26] LOG:  redo done at 0/17778E0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+db_1       | 2022-07-05 20:58:40.489 UTC [1] LOG:  database system is ready to accept connections
+backend_1  | No changes detected
+backend_1  | Operations to perform:
+backend_1  |   Apply all migrations: admin, auth, contenttypes, mysite, sessions
+backend_1  | Running migrations:
+backend_1  |   No migrations to apply.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 20:58:43
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_backend_1   ... 
+Stopping proj_db_1        ... 
+Killing proj_backend_1    ... done
+Killing proj_db_1         ... done
+ERROR: 2
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+ERROR: The Compose file './docker-compose.yml' is invalid because:
+services.db.expose is invalid: should be of the format 'PORT[/PROTOCOL]'
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+ERROR: The Compose file './docker-compose.yml' is invalid because:
+services.db.expose is invalid: should be of the format 'PORT[/PROTOCOL]'
+(sample) dolby@dolby-ASUS-TUF-Gaming-F15-FX506HCB-FX506HCB:~/dattebayo/python_/Proj$ docker-compose up --build
+Building backend
+[+] Building 2.4s (12/12) FINISHED                                                                                                
+ => [internal] load build definition from Dockerfile                                                                         0.0s
+ => => transferring dockerfile: 38B                                                                                          0.0s
+ => [internal] load .dockerignore                                                                                            0.0s
+ => => transferring context: 2B                                                                                              0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                               2.3s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                0.0s
+ => [stage-1 1/6] FROM docker.io/library/python:3.10@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d8c5  0.0s
+ => [internal] load build context                                                                                            0.0s
+ => => transferring context: 773B                                                                                            0.0s
+ => CACHED [stage-1 2/6] WORKDIR /app/backend                                                                                0.0s
+ => CACHED [stage-1 3/6] COPY requirements.txt /app/backend/                                                                 0.0s
+ => CACHED [stage-1 4/6] RUN pip install -U pip                                                                              0.0s
+ => CACHED [stage-1 5/6] RUN pip install -r /app/backend/requirements.txt                                                    0.0s
+ => CACHED [stage-1 6/6] COPY proj /app/backend/                                                                             0.0s
+ => exporting to image                                                                                                       0.0s
+ => => exporting layers                                                                                                      0.0s
+ => => writing image sha256:aaec94576b3a83707a75d93100212f32db1fa0147c3b2a963b68920b3fb7cfd5                                 0.0s
+ => => naming to docker.io/library/proj_backend                                                                              0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Starting proj_db_1 ... done
+Starting proj_backend_1 ... done
+Attaching to proj_db_1, proj_backend_1
+db_1       | 
+db_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1       | 
+db_1       | 2022-07-05 21:46:26.628 UTC [1] LOG:  starting PostgreSQL 14.4 (Debian 14.4-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1       | 2022-07-05 21:46:26.628 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1       | 2022-07-05 21:46:26.628 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1       | 2022-07-05 21:46:26.632 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1       | 2022-07-05 21:46:26.636 UTC [26] LOG:  database system was interrupted; last known up at 2022-07-05 20:58:40 UTC
+db_1       | 2022-07-05 21:46:26.669 UTC [26] LOG:  database system was not properly shut down; automatic recovery in progress
+db_1       | 2022-07-05 21:46:26.671 UTC [26] LOG:  redo starts at 0/1777990
+db_1       | 2022-07-05 21:46:26.671 UTC [26] LOG:  invalid record length at 0/17779C8: wanted 24, got 0
+db_1       | 2022-07-05 21:46:26.671 UTC [26] LOG:  redo done at 0/1777990 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+db_1       | 2022-07-05 21:46:26.682 UTC [1] LOG:  database system is ready to accept connections
+backend_1  | No changes detected
+backend_1  | Operations to perform:
+backend_1  |   Apply all migrations: admin, auth, contenttypes, mysite, sessions
+backend_1  | Running migrations:
+backend_1  |   No migrations to apply.
+backend_1  | Watching for file changes with StatReloader
+backend_1  | Performing system checks...
+backend_1  | 
+backend_1  | System check identified no issues (0 silenced).
+backend_1  | July 05, 2022 - 21:46:28
+backend_1  | Django version 4.0.5, using settings 'proj.settings'
+backend_1  | Starting development server at http://0.0.0.0:8000/
+backend_1  | Quit the server with CONTROL-C.
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping proj_backend_1 ... 
+Stopping proj_db_1      ... 
+Killing proj_backend_1  ... done
+Killing proj_db_1       ... done
+
