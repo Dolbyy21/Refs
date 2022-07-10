@@ -43,3 +43,24 @@ services:
     depends_on:
       - db
   
+  basic:
+    # building the Dockerfile in frontend folder
+    build: ./frontend
+    # volumes:
+    #   - ./frontend:/app/frontend
+    #   # One-way volume to use node_modules from inside image
+    #   - /app/frontend/node_modules
+
+    # HOST PORT : CONTAINER PORT
+    ports:
+      - "3000:3000"
+
+    environment:
+      - NODE_ENV=development
+
+    # Front depends on backend_server
+    depends_on:
+      - backend_python
+
+    # to start frontend server
+    command: npm start
