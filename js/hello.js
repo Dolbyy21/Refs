@@ -1,19 +1,15 @@
 // js is dynamically typed
 
-// Instead of using console.log all the time will use the function names cl which takes a parameter as input for this entire code
-function cl(a){
-    console.log(a);
-}
 
 console.log("Hello from external js"); // op = Hello from external js
 
 // variables 
 
 let age = 20; // can be changed
-cl(age) // op = 20
+console.log(age) // op = 20
 
 const salary = 100; // cannot be changed
-cl(salary) // op = 100
+console.log(salary) // op = 100
 
 // DATA TYPES
     //PRIMITIVE
@@ -31,8 +27,8 @@ cl(salary) // op = 100
     const hadNext = false;
 // Undefined
     let result;
-    cl("pre-result "+result +" post-result"); // op = pre-result undefined post-result
-    cl('pre-result', result ,' post-result') // op = pre-result
+    console.log("pre-result "+result +" post-result"); // op = pre-result undefined post-result
+    console.log('pre-result', result ,' post-result') // op = pre-result
     const res = undefined; // not yet defined
     const data = null; // to explicitly define initialize with null
 //BigInt, Symbol -> not beginner level
@@ -44,31 +40,31 @@ cl(salary) // op = 100
         "age":"22",
     };
 
-    cl(person.name); // op = Dolby
-    cl(person.age); // op = 22
+    console.log(person.name); // op = Dolby
+    console.log(person.age); // op = 22
 
 // array 
     const nums1 = [1,2,3,4];
-    cl(nums1[0]) // op = 1
+    console.log(nums1[0]) // op = 1
 
 
 // OPERATORS
-cl("\nOPERATORS\n")
+console.log("\nOPERATORS\n")
 let x = 10; // assigment operator
 let y = 3;
 
-cl(x+y); cl(x-y); cl(x/y) ; cl(x%y) // Arthimetic operators
+console.log(x+y); console.log(x-y); console.log(x/y) ; console.log(x%y) // Arthimetic operators
 
 // op = 13
 //      7
 //      3.3333333333333335
 //      1
 
-cl(
+console.log(
     "\nInc and dec ops x = 10 \n"
 )
 
-cl(++x); cl(x--); cl(x);// Increment and decrement same as java and cpp
+console.log(++x); console.log(x--); console.log(x);// Increment and decrement same as java and cpp
 
 // op = 11
 //      11 
@@ -76,8 +72,8 @@ cl(++x); cl(x--); cl(x);// Increment and decrement same as java and cpp
 
 let a1 = 10;
 let b1 = '10';
-cl("\ncomaprison Ops\n")
-cl(a1==b1); cl(a1 === b1); cl(a1>=b1); cl(a1!=b1); cl(a1!==b1) // comparison operators
+console.log("\ncomaprison Ops\n")
+console.log(a1==b1); console.log(a1 === b1); console.log(a1>=b1); console.log(a1!=b1); console.log(a1!==b1) // comparison operators
 
 // op = true
 //      false
@@ -85,47 +81,47 @@ cl(a1==b1); cl(a1 === b1); cl(a1>=b1); cl(a1!=b1); cl(a1!==b1) // comparison ope
 //      false
 //      true
 
-cl("\nlogical Ops\n")
-cl(true && true); cl(true || false); cl(false && true) 
+console.log("\nlogical Ops\n")
+console.log(true && true); console.log(true || false); console.log(false && true) 
 
 // op = true
 //      true 
 //      false
 
-cl('abc'+'def') // op = abcdef  ....string concatenation
-cl(23+'ase') // op = 23ase  ....numebr gets converted to str
+console.log('abc'+'def') // op = abcdef  ....string concatenation
+console.log(23+'ase') // op = 23ase  ....numebr gets converted to str
 
 // ternary op
-cl('\nternary op a = 11\n')
+console.log('\nternary op a = 11\n')
 let numb = 11
 const isEven = numb%2 === 0 ? 'Numebr is even':'It is odd' 
-cl(isEven) // op = It is odd
+console.log(isEven) // op = It is odd
 
 // TYPE CONVERSIONS
 // 1.Implicit 
 // 2. Explicit
 
-cl('abs'+2) // implicit op = abs2
-cl(true+'3') // implicit op = true3
-cl('4'-'1') //implicit op = 3
-cl('Doodle'- 'guy') // implicit op = NaN
-cl('5'-null) // implicit op = 5
-cl(5+undefined) // implicit op = NaN
+console.log('abs'+2) // implicit op = abs2
+console.log(true+'3') // implicit op = true3
+console.log('4'-'1') //implicit op = 3
+console.log('Doodle'- 'guy') // implicit op = NaN
+console.log('5'-null) // implicit op = 5
+console.log(5+undefined) // implicit op = NaN
 
-cl("\nExplicit\n")
-cl(Number('3')) // op = 3
-cl(Number('a')) // op = NaN
-cl(Number('3.14')) // op = 3.14
-cl(parseInt('3')) // op = 3
-cl(parseFloat('3.14')) // op = 3.14
-cl(String(500))
-cl(String(null))
-cl(String(undefined))
-cl((20).toString()) // op = 20 ... toString cannot convert null, undefined
+console.log("\nExplicit\n")
+console.log(Number('3')) // op = 3
+console.log(Number('a')) // op = NaN
+console.log(Number('3.14')) // op = 3.14
+console.log(parseInt('3')) // op = 3
+console.log(parseFloat('3.14')) // op = 3.14
+console.log(String(500))
+console.log(String(null))
+console.log(String(undefined))
+console.log((20).toString()) // op = 20 ... toString cannot convert null, undefined
 
-cl(Boolean(10)) // op = true ... this returns 0 when the input is null, undefined, 0 , '', NaN
-cl(Boolean(' ')) // op = true 
-cl(Boolean(false)) // op = false
+console.log(Boolean(10)) // op = true ... this returns 0 when the input is null, undefined, 0 , '', NaN
+console.log(Boolean(' ')) // op = true 
+console.log(Boolean(false)) // op = false
 
 
 // EQUALITY 
@@ -135,21 +131,21 @@ cl(Boolean(false)) // op = false
 const a = 10
 const b = 10
 
-cl(a == b) // op = true
-cl(a === b) // op = true
+console.log(a == b) // op = true
+console.log(a === b) // op = true
 
 const c = 10
 const d = '10'
 
-cl(c == d) // op = true
-cl(c === d) // op = false
+console.log(c == d) // op = true
+console.log(c === d) // op = false
 
 // Conditional Statements
 
 // if 
 const number = 5;
 if (number > 0){
-    cl("Postive");
+    console.log("Postive");
 }
 // op = Positive
 
@@ -158,20 +154,20 @@ if (number > 0){
 const num2 = 10;
 
 if (num2%2 === 0){
-    cl("Even");
+    console.log("Even");
 }else{
-    cl("Odd");
+    console.log("Odd");
 }
 // op = Even
 
 // if else if
 let num = 5;
 if (num < 5){
-    cl("Num is less than 5");
+    console.log("Num is less than 5");
 }else if (num > 5){
-    cl("Num is greater than 5");
+    console.log("Num is greater than 5");
 }else if(num === 5){
-    cl("Num is equal to 5")
+    console.log("Num is equal to 5")
 }
 // op = Num is equal to 5
 
@@ -181,16 +177,16 @@ const color = 'red';
 
 switch(color){
     case 'red':
-        cl('color is red');
+        console.log('color is red');
         break;
     case 'blue':
-        cl('color is blue');
+        console.log('color is blue');
         break;
     case 'yellow':
-        cl('color is yellow');
+        console.log('color is yellow');
         break;
     default:
-        cl("No color is given")
+        console.log("No color is given")
     }
 // op = color is red
 
@@ -198,7 +194,7 @@ switch(color){
 // for 
 
 for (let i = 1; i <= 5; i++){
-    cl("current iteration is "+ i);
+    console.log("current iteration is "+ i);
 }
 
 // op = current iteration is 1
@@ -208,11 +204,11 @@ for (let i = 1; i <= 5; i++){
 //      current iteration is 5
 
 // while 
-cl('\nwhile\n')
+console.log('\nwhile\n')
 let i = 1;
 
 while (i < 6){
-    cl("current iteration is "+i);
+    console.log("current iteration is "+i);
     i++;
 }
 // op = current iteration is 1
@@ -223,7 +219,7 @@ while (i < 6){
 
 i = 1;
 do{
-    cl("One time definitely executes even though it doesn;t satisfies the condition in while");
+    console.log("One time definitely executes even though it doesn;t satisfies the condition in while");
 }while(i > 1);
 
 // op = One time definitely executes even though it doesn;t satisfies the condition in while
@@ -232,7 +228,7 @@ do{
 const nums = [1,2,3,4,5];
 
 for(const each of nums){ // picks the element in array at each iteration
-    cl(each);
+    console.log(each);
 }
 
 
@@ -241,12 +237,12 @@ for(const each of nums){ // picks the element in array at each iteration
 function func1(name){
     return "Hello "+name;
 }
-cl(func1('Dolby')) // op = Hello Dolby
+console.log(func1('Dolby')) // op = Hello Dolby
 
 function add(a, b){
     return a+b;
 }
-cl(add(2,3)) // op = 5
+console.log(add(2,3)) // op = 5
 
 // ARROW FUNCTIONS
 
@@ -258,8 +254,8 @@ const arrowAdd = (a,b)=>{
 
 const arrowSum = (a,b) => a+b;
 
-cl(arrowAdd(1,2)); // op = 3
-cl(arrowSum(1,2)); // op = 3
+console.log(arrowAdd(1,2)); // op = 3
+console.log(arrowSum(1,2)); // op = 3
 num = 17;
 const addFive = num => num+5; // op = 22
 const addFivee = (num) => num+5; // op = 22
@@ -270,11 +266,11 @@ if(true){
     const myName = 'Donglee';
 }
 
-// cl(myName) // op = ERROR : myName is not defined
+// console.log(myName) // op = ERROR : myName is not defined
 
 if (true){
     const myName = 'Donglee';
-    cl(myName); // op = Donglee
+    console.log(myName); // op = Donglee
 }
 
 // high order functions
@@ -287,7 +283,7 @@ function testFn1(a){
     else return a;
 }
 
-cl(testFn1(10)) //  op = 10
-cl(testFn1(9)) // op = 10
+console.log(testFn1(10)) //  op = 10
+console.log(testFn1(9)) // op = 10
 
 // Global variables can be used in any control statement and loops through the entire code
