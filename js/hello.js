@@ -28,7 +28,7 @@ console.log(salary) // op = 100
 // Undefined
     let result;
     console.log("pre-result "+result +" post-result"); // op = pre-result undefined post-result
-    console.log('pre-result', result ,' post-result') // op = pre-result
+    console.log('pre-result', result ,' post-result') // op = pre-result undefined post-result
     const res = undefined; // not yet defined
     const data = null; // to explicitly define initialize with null
 //BigInt, Symbol -> not beginner level
